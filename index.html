@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon"
+          type="image/svg+xml"
+          href="/vite.svg" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0" />
+    <title>Alpine Motion Plugin Examples</title>
+  </head>
+
+  <body>
+
+    <main class="container mx-auto my-20">
+      <div x-init>
+        <button class="mb-10 px-6 py-1.5 rounded bg-indigo-500 text-white"
+                @click="$motion('boxAnimation1', 'play')">Rotate</button>
+        <div x-motion:name="boxAnimation1"
+             x-motion:animate.rotate.90deg.duration.1500ms
+             class="w-24 h-24 rounded-lg bg-indigo-500">
+        </div>
+      </div>
+    </main>
+
+    <script type="module"
+            src="/main.js"></script>
+  </body>
+
+</html>
