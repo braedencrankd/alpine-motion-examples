@@ -15,11 +15,17 @@
 
     <main class="container mx-auto my-20">
       <div x-init>
-        <button class="mb-10 px-6 py-1.5 rounded bg-indigo-500 text-white"
-                @click="$motion('boxAnimation1', 'play')">Rotate</button>
-        <div x-motion:name="boxAnimation1"
-             x-motion:animate.rotate.90deg.duration.1500ms
-             class="w-24 h-24 rounded-lg bg-indigo-500">
+        <div class="flex gap-2 mb-2">
+          <button class="px-6 py-1.5 rounded bg-blue-500 text-white"
+                  @click="$motion('box-animation-1', 'play')">Play</button>
+          <button class="px-6 py-1.5 rounded bg-red-500 text-white"
+                  @click="$motion('box-animation-2', 'play')">Reverse</button>
+        </div>
+        <button class="mb-10 px-6 py-1.5 rounded bg-green-500 text-white"
+                @click="$motion('box-animation-1', 'pause')">Pause</button>
+        <div x-motion:box-animation-1.rotate.90deg.duration.1500ms
+             x-motion:box-animation-2.rotate.-90deg.duration.1500ms
+             class="w-24 h-24 bg-indigo-500 rounded-lg">
         </div>
       </div>
     </main>
