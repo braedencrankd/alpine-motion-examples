@@ -5,10 +5,6 @@ import { files as exampleOne } from "./examples/example_01/files";
 import { files as exampleTwo } from "./examples/example_02/files";
 
 function App() {
-  // read index.txt and return the contents as a string
-
-  const fs = import("fs");
-
   return (
     <>
       <main className="container my-16 space-y-16">
