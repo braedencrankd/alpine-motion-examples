@@ -1,7 +1,7 @@
 import "./style.css";
 
 import Alpine from "alpinejs";
-import alpineMotion from "alpine-motion";
+import alpineMotion from "@braedencrankd/alpine-motion";
 
 Alpine.plugin(alpineMotion);
 
