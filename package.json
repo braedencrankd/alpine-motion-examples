@@ -19,8 +19,6 @@
     "vite": "^5.0.8"
   },
   "dependencies": {
-    "@braedencrankd/alpine-motion": "^0.1.0",
-    "@codesandbox/sandpack-react": "^2.11.0",
-    "alpinejs": "^3.13.3"
+    "@codesandbox/sandpack-react": "^2.11.0"
   }
 }
