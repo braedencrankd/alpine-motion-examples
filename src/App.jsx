@@ -64,6 +64,10 @@ function App() {
             </span>
             function 🐇
           </h2>
+          <p className="my-8 italic text-white">
+            Note: Currently this example does not work in the embeded sandbox.
+            Click the <b>Open in Sandbox</b> button to see it in action.
+          </p>
           <Sandpack
             files={exampleThree}
             theme={sandpackDark}
