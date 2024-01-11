@@ -65,6 +65,11 @@ body {
   background-color: white;
 }
 
+.box-group {
+  display: flex;
+  gap: 2rem;
+}
+
 #box {
   width: 100px;
   height: 100px;
