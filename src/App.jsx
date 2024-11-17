@@ -26,7 +26,7 @@ function App() {
     },
     {
       title: "Example 3: Using the spring() function 🐇",
-      note: "Currently this example won't work in the embeded sandbox. You can view it on CodeSandbox by clicking the Open SandBox button button below.",
+      note: "",
       files: exampleThree,
     },
     {
@@ -50,6 +50,82 @@ function App() {
         <h1 className="text-4xl font-black lg:text-5xl text-primary">
           Alpine Motion Plugin Examples
         </h1>
+
+        {/* Install Instructions */}
+        <section>
+          <h2 className="mb-8 text-2xl font-bold tracking-wide text-white">
+            Install Instructions
+          </h2>
+
+          <p className="text-lg text-gray-300">
+            To view the examples, click on the "Open Sandbox" button below each
+            example.
+          </p>
+
+          {/* Install package */}
+          <div className="flex flex-col gap-4 mt-4">
+            <p className="text-lg text-gray-300">
+              To install the package, run the following command:
+            </p>
+            <div className="relative">
+              <pre className="p-4 text-lg text-gray-300 bg-gray-800 rounded-md">
+                npm install @braedencrankd/alpine-motion
+              </pre>
+              <button
+                onClick={(event) => {
+                  navigator.clipboard.writeText(
+                    "npm install @braedencrankd/alpine-motion"
+                  );
+                  const btn = event.target;
+                  btn.textContent = "Copied!";
+                  setTimeout(() => {
+                    btn.textContent = "Copy";
+                  }, 2000);
+                }}
+                className="absolute top-2 right-2 px-2 py-1 text-sm text-gray-300 bg-gray-700 rounded-md transition-colors hover:bg-gray-600"
+              >
+                Copy
+              </button>
+            </div>
+          </div>
+
+          {/* Alpine extension install  */}
+          <div className="flex flex-col gap-4 mt-8">
+            <p className="text-lg text-gray-300">
+              Then add the plugin to your Alpine installation:
+            </p>
+            <div className="relative">
+              <pre className="p-4 text-lg text-gray-300 bg-gray-800 rounded-md">
+                {`import Alpine from 'alpinejs'
+import { Motion } from '@braedencrankd/alpine-motion'
+
+Alpine.plugin(Motion)
+Alpine.start()`}
+              </pre>
+              <button
+                onClick={(event) => {
+                  navigator.clipboard.writeText(
+                    `import Alpine from 'alpinejs'
+import { Motion } from '@braedencrankd/alpine-motion'
+
+window.Alpine = Alpine;
+Alpine.plugin(Motion)
+Alpine.start()`
+                  );
+                  const btn = event.target;
+                  btn.textContent = "Copied!";
+                  setTimeout(() => {
+                    btn.textContent = "Copy";
+                  }, 2000);
+                }}
+                className="absolute top-2 right-2 px-2 py-1 text-sm text-gray-300 bg-gray-700 rounded-md transition-colors hover:bg-gray-600"
+              >
+                Copy
+              </button>
+            </div>
+          </div>
+        </section>
+
         {sections.map((section, index) => (
           <section key={index}>
             <h2 className="mb-8 text-2xl font-bold tracking-wide text-white">
@@ -65,7 +141,7 @@ function App() {
               customSetup={{
                 dependencies: {
                   alpinejs: "3.13.3",
-                  "@braedencrankd/alpine-motion": "latest",
+                  "@braedencrankd/alpine-motion": "0.2.0",
                 },
               }}
               options={{
