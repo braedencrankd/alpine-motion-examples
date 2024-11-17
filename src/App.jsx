@@ -48,7 +48,7 @@ function App() {
     <>
       <main className="container my-16 space-y-16">
         <h1 className="text-4xl font-black lg:text-5xl text-primary">
-          Alpine Motion Plugin Examples
+          AlpineJS Motion Plugin
         </h1>
 
         {/* Install Instructions */}
@@ -60,6 +60,21 @@ function App() {
           <p className="text-lg text-gray-300">
             To view the examples, click on the "Open Sandbox" button below each
             example.
+          </p>
+
+          {/* Add Motion.dev documentation link */}
+          <p className="mb-4 text-lg text-gray-300">
+            This plugin is powered by the{" "}
+            <a
+              href="https://motion.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline"
+            >
+              Motion
+            </a>{" "}
+            animation library. Check out their documentation for more details on
+            animation options.
           </p>
 
           {/* Install package */}
@@ -108,7 +123,6 @@ Alpine.start()`}
                     `import Alpine from 'alpinejs'
 import { Motion } from '@braedencrankd/alpine-motion'
 
-window.Alpine = Alpine;
 Alpine.plugin(Motion)
 Alpine.start()`
                   );
